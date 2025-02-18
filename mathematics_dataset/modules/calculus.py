@@ -126,7 +126,7 @@ def _sample_integrand(coefficients, derivative_order, derivative_axis, entropy):
   extra_coeffs = polynomials.sample_coefficients(constant_degrees, entropy)
   pad_amount = coefficients.shape[derivative_axis]
   pad = [(0, pad_amount if i == derivative_axis else 0)
-         for i in range(coefficients.ndim)]
+     for i in range(coefficients.ndim)]
   extra_coeffs = np.pad(extra_coeffs, pad, 'constant', constant_values=0)
   return integrand + extra_coeffs
 
