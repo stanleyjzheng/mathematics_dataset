@@ -151,8 +151,8 @@ def round_number(value, sample_args, context=None):
   value_integer = number.integer(answer_entropy, signed=True)
 
   remainder_divisor = 10 ** int(math.ceil(entropy))
-  remainder_range_lower = -remainder_divisor / 2
-  remainder_range_upper = remainder_divisor / 2
+  remainder_range_lower = int(-remainder_divisor / 2)
+  remainder_range_upper = int(remainder_divisor / 2)
 
   if value_integer <= 0:
     remainder_range_lower += 1
